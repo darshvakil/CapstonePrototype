@@ -1,0 +1,15 @@
+{
+	"identifier": "Level_0",
+	"uniqueIdentifer": "7987bdb0-e920-11ef-af51-8ff71ecf4a81",
+	"x": -288,
+	"y": 0,
+	"width": 880,
+	"height": 256,
+	"bgColor": "#696A79",
+	"neighbourLevels": [],
+	"customFields" : {},
+	"layers": [
+		"Forest.png"
+	],
+	"entities" : {}
+}
