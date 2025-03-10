@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6545956734f0074292e9dfb83fab1df
+guid: bc6cf8ba5da529746b9b521efcf99eb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2834776277396854995
-    second: player_attack01_02_0
+      213: 6635627461397641973
+    second: player_idle_03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_attack01_02_0
+      name: player_idle_03_0
       rect:
         serializedVersion: 2
-        x: 80
+        x: 90
         y: 79
-        width: 37
-        height: 17
+        width: 10
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d891f74106275720800000000000000
-      internalID: 2834776277396854995
+      spriteID: 5fafe62e40c761c50800000000000000
+      internalID: 6635627461397641973
       vertices: []
       indices: 
       edges: []
