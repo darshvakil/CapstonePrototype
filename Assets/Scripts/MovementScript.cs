@@ -1,74 +1,76 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class MovementScript : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
+    private float horizontal;
+    private float speed = 5f;
+    private float jumpForce = 5f; // Adjust as needed
+    private bool isFacingRight = true;
 
-    private Rigidbody2D rb;
-    private bool isGrounded;
-    public bool IsMoving { get; private set; } // Default is false
-    private bool facingRight = true; // To track player direction
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
 
-    private Animator animator;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Get the Animator component
-    }
+    public bool IsMoving { get; private set; }
+    public bool IsJumping { get; private set; } // New jump tracking variable
 
     void Update()
     {
-        Move();
-        Jump();
-        UpdateAnimation();
+        // Get horizontal movement input
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        // Determine movement state (only when not attacking or jumping)
+        IsMoving = Mathf.Abs(horizontal) > 0.1f;
+        animator.SetBool("IsMoving", IsMoving && !IsJumping);
+
+        // Jump input
+        if (Input.GetKeyDown(KeyCode.Space) && !IsJumping)
+        {
+            Jump();
+        }
+
+        // Attack input (e.g., pressing J key)
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Attack();
+        }
+
+        // Flip character if needed
+        Flip();
     }
 
-    void Move()
+    private void Attack()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal"); // -1 (left), 1 (right), 0 (idle)
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
-        // Set IsMoving based on input
-        IsMoving = (moveInput != 0);
-
-        // Flip character if moving in a different direction
-        if (moveInput > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if (moveInput < 0 && facingRight)
-        {
-            Flip();
-        }
+        animator.SetTrigger("Attack"); // Trigger attack animation
     }
 
-    void Jump()
+    private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
+        // Move the character
+        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
 
-    void UpdateAnimation()
+    private void Jump()
     {
-        if (animator != null)
-        {
-            animator.SetBool("IsMoving", IsMoving); // Update Animator parameter
-        }
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        IsJumping = true;
+        animator.SetBool("IsJumping", true);
     }
 
-    void Flip()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        facingRight = !facingRight; // Toggle direction
-        Vector3 scale = transform.localScale;
-        scale.x *= -1; // Flip sprite
-        transform.localScale = scale;
+        // Assume platform is the ground
+        IsJumping = false;
+        animator.SetBool("IsJumping", false);
+    }
+
+    private void Flip()
+    {
+        if ((isFacingRight && horizontal < 0f) || (!isFacingRight && horizontal > 0f))
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }

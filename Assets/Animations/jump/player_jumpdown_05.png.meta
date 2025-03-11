@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_jumpdown_05_0: -5642920022686377606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
