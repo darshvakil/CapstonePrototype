@@ -4,7 +4,7 @@ public class MovementScript : MonoBehaviour
 {
     private float horizontal;
     private float speed = 5f;
-    private float jumpForce = 5f; // Adjust as needed
+    private float jumpForce = 7f; // Adjust as needed
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
