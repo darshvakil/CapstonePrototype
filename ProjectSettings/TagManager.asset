@@ -44,5 +44,8 @@ TagManager:
   - name: Background
     uniqueID: 1851684755
     locked: 0
+  - name: Tileset
+    uniqueID: 2700820879
+    locked: 0
   m_RenderingLayers:
   - Default

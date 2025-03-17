@@ -1982,6 +1982,14 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5761152602828768689, guid: b45a66771d827ee4ba758608c340f5ee, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761152602828768689, guid: b45a66771d827ee4ba758608c340f5ee, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7114838470815083066, guid: b45a66771d827ee4ba758608c340f5ee, type: 3}
       propertyPath: m_Material
       value: 
