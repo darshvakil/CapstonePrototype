@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000093775e6e
+  m_ApplyToSortingLayers: 0000000093775e6e8f41fba0
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2797,8 +2797,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.061445832, y: 0.11164576}
-  m_Size: {x: 0.29798055, y: 0.4451666}
+  m_Offset: {x: -0.05565715, y: 0.11164576}
+  m_Size: {x: 0.3095579, y: 0.4451666}
   m_Direction: 0
 --- !u!50 &1750043978
 Rigidbody2D:
