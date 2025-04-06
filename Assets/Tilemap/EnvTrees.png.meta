@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 5ead4e9a1b2c5cc46ac9b529a84e17c8
+guid: 8943acdf637f217448829ce4d5821fd3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2054733500813134628
-    second: Level_0__Background_0
+      213: 2383478599587729689
+    second: EnvTrees_0
+  - first:
+      213: -7816210658244871141
+    second: EnvTrees_1
+  - first:
+      213: 7293383176218504155
+    second: EnvTrees_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -55,7 +61,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -72,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Level_0__Background_0
+      name: EnvTrees_0
       rect:
         serializedVersion: 2
-        x: 607
-        y: 15
-        width: 1026
-        height: 578
+        x: 662
+        y: 47
+        width: 121
+        height: 153
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd430f774ce1c73e0800000000000000
-      internalID: -2054733500813134628
+      spriteID: 9111c2a7821d31120800000000000000
+      internalID: 2383478599587729689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvTrees_1
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 47
+        width: 121
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c31b181dd378390800000000000000
+      internalID: -7816210658244871141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnvTrees_2
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 95
+        width: 121
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb60555b5d473560800000000000000
+      internalID: 7293383176218504155
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Level_0__Background_0: -2054733500813134628
+      EnvTrees_0: 2383478599587729689
+      EnvTrees_1: -7816210658244871141
+      EnvTrees_2: 7293383176218504155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
