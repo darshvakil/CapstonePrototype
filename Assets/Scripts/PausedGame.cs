@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class PausedGame : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public  bool isPaused;
+    public bool isPaused;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,10 +46,11 @@ public class PausedGame : MonoBehaviour
 
     public void GoToSettings()
     {
-        Debug.Log("Loading SettingScene...");
+        PlayerPrefs.SetInt("FromGame", 1);
         SceneManager.LoadScene("SettingScene");
         Time.timeScale = 1f;
     }
+
 
     public void QuitGame()
     {

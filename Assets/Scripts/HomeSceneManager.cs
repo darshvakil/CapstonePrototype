@@ -18,6 +18,12 @@ public class HomeSceneManager : MonoBehaviour
             quitButton.onClick.AddListener(QuitGame);
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SampleScene"); // Replace "GameScene" with your actual game scene name
+    }
+    
+
     public void GoToAboutUs()
     {
         Debug.Log("Loading AboutScene...");
@@ -26,7 +32,7 @@ public class HomeSceneManager : MonoBehaviour
 
     public void GoToSettings()
     {
-        Debug.Log("Loading SettingScene...");
+        PlayerPrefs.SetInt("FromGame", 0); // Ensure it's set to 0 when coming from home
         SceneManager.LoadScene("SettingScene");
     }
 
